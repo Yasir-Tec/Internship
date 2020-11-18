@@ -1,0 +1,50 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Registration Page</title>
+</head>
+<body>
+<center>
+<form method="post" action="UserRegistered/">
+    {% csrf_token %}
+    <h2>User Registration</h2><br><br>
+     <label>First Name:</label>
+    <input type="text" name="fname" id="first_name" required pattern="[a-zA-Z]+" title="contains only characters"/><br>
+      <label>Last Name:</label>
+<input type="text" name="lname" id="last_name" required pattern="[a-zA-Z]+" title="contains only characters"/><br>
+      <label>Department:</label>
+  <select name="department" required>
+                                    <option value="cse">CSE</option>
+                                    <option value="mech">MECH</option>
+                                    <option value="auto">AUTO</option>
+                                    <option value="civil">CIVIL</option>
+                                    <option value="E&tc">E&TC</option>
+  </select><br>
+      <label>Division:</label>
+  <select name="division" required>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+  </select><br>
+      <label>Email:</label>
+<input type="text" name="email" id="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="Email must be in gmail format example-> example@gmail.com"/><br>
+      <label>Mobile:</label>
+<input type="text" name="mobile" id="mobile" required pattern="[0-9]+" title="contains only numbers"/>
+    <br>
+      <label>Username:</label>
+<input type="text" name="username" id="username" required pattern="[a-zA-Z]+" title="contains only characters"/>
+    <br>
+      <label>password:</label>
+<input type="text" name="password" id="password" required pattern="[a-zA-Z]+" title="contains only characters"/>
+
+    <br>
+
+ <input type="submit" value="Submit" class="submit" id="submit"  name="submit"/>
+</form>
+    </center>
+</body>
+</html>
