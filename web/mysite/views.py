@@ -4,7 +4,7 @@ from .models import user
 
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+    return render(request, 'index.html')
 
 
 def UserRegPage(request):
