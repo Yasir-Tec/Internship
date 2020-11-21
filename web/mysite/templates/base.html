@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <style>
+    *{
+      margin: 0px;
+    }
+    .navbar{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgb(203 204 233);
+      height: 100px;
+    }
+    .navigation{
+      margin-right: 400px;
+    }
+    .btn{
+      text-decoration: none;
+      color: black;
+      padding: 15px;
+      margin-left: 10px;
+      background-color: white;
+      border: 2px solid white;
+      border-radius: 25px;
+      font-size: 1.1rem;
+    }
+    .btn:hover{
+      background-color: rgb(110, 166, 218);
+      border: 2px solid teal;
+    }
+  </style>
+  {% block style %}
+    
+  {% endblock style %}
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navigation">
+      <a class="btn" href="/">Home</a>
+    </div>
+    
+    <a class="btn" href="/regpage">Register</a>
+    <a class="btn" href="/userLoginPage">Login</a>
+  </nav>
+  {% block body %}<h1>Welcome, to the homepage!</h1>{% endblock body %} 
+</body>
+</html>
